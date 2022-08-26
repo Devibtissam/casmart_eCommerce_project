@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casmart</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="d-flex container">
+        <div class="overlay" data-overlay></div>
+        <div class="search-form">
+          <label for="search">search product</label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search Product"
+          />
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="./assets/images/logo.svg"
+              alt="logo"
+              width="130px"
+              height="30px"
+          /></a>
+        </div>
+        <div class="header-actions">
+          <button>
+            <ion-icon
+              name="person-outline"
+              aria-hidden="true"
+              class="header-action-icon"
+            ></ion-icon>
+            <span>Sign in</span>
+          </button>
+          <button>
+            <ion-icon
+              name="search-outline"
+              aria-hidden="true"
+              class="header-action-icon"
+            ></ion-icon>
+            <span>Search</span>
+          </button>
+          <button>
+            <ion-icon
+              name="cart-outline"
+              aria-hidden="true"
+              class="header-action-icon"
+            ></ion-icon>
+            <span>Cart</span>
+            <i class="action-notif">3</i>
+          </button>
+          <button>
+            <ion-icon
+              name="heart-outline"
+              aria-hidden="true"
+              class="header-action-icon"
+            ></ion-icon>
+            <span>Wishlisht</span>
+            <i class="action-notif">2</i>
+          </button>
+        </div>
+        <button class="nav-open-menu" data-nav-open-btn>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="navbar" data-navbar>
+          <div class="top-navbar">
+            <a href="index.html"
+              ><img
+                src="./assets/images/logo.svg"
+                width="130px"
+                height="30px"
+                alt="logo"
+            /></a>
+            <button class="nav-close-menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ****** HERO SECTION ******* -->
+      <section
+        class="hero-section d-flex"
+        style="background-image: url('./assets/images/hero-banner.jpg')"
+      >
+        <div class="hero-content container">
+          <p class="hero-subtitle">Fashion Everyday</p>
+          <h1 class="hero-title">Unrivalled Fashion House</h1>
+          <button class="primary-btn btn">Shop Now</button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- ********* SERVICE SECTION ******** -->
+      <div class="service-container d-flex container">
+        <div class="service-item">
+          <img src="./assets/images/service-icon-1.svg" alt="service icon" />
+          <div class="service-info">
+            <h2 class="service-title">Free Shipping</h2>
+            <p class="service-desc">On All Order Over $599</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="./assets/images/service-icon-2.svg" alt="service icon" />
+          <div class="service-info">
+            <h2 class="service-title">Easy Returns</h2>
+            <p class="service-desc">30 Day Returns Policy</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="./assets/images/service-icon-3.svg" alt="service icon" />
+          <div class="service-info">
+            <h2 class="service-title">Secure Payment</h2>
+            <p class="service-desc">100% Secure Gaurantee</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="./assets/images/service-icon-4.svg" alt="service icon" />
+          <div class="service-info">
+            <h2 class="service-title">Special Support</h2>
+            <p class="service-desc">24/7 Dedicated Support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ********* CATEGORY SECTION ********* -->
+      <div class="category-container container d-flex">
+        <picture>
+          <img
+            src="./assets/images/category-1.jpg"
+            alt="Sunglass & eye"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Sunglasses & Eye</button>
+        </picture>
+        <picture>
+          <img
+            src="./assets/images/category-2.jpg"
+            alt="Active & Outdoor"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Active & Outdoor</button>
+        </picture>
+        <picture>
+          <img
+            src="./assets/images/category-3.jpg"
+            alt="Winter Wear"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Winter Wear</button>
+        </picture>
+        <picture>
+          <img
+            src="./assets/images/category-4.jpg"
+            alt="Exclusive Footwear"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Exclusive Footwear</button>
+        </picture>
+        <picture>
+          <img
+            src="./assets/images/category-5.jpg"
+            alt="Jewelry"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Jewelry</button>
+        </picture>
+        <picture>
+          <img
+            src="./assets/images/category-6.jpg"
+            alt="Sports Cap"
+            loading="lazy"
+            width="510"
+            height="600"
+          />
+          <button class="btn secondary-btn">Sports Cap</button>
+        </picture>
+      </div>
+
+      <!-- ********* PRODUCTS SECTION ******** -->
+      <section class="products-container container">
+        <h2 class="section-title">Products of the week</h2>
+        <div class="products-sort d-flex">
+          <h3>Electronics</h3>
+          <h3>Jewelery</h3>
+          <h3>Men's clothing</h3>
+          <h3>Women's clothing</h3>
+        </div>
+        <div class="products-cards d-flex">
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+
+          <article>
+            <picture>
+              <img src="./assets/images/product-1.jpg" alt="" />
+              <div class="product-card-action">
+                <button><ion-icon name="eye-outline"></ion-icon></button>
+                <button>
+                  <ion-icon
+                    name="bag-handle-outline"
+                    aria-hidden="true"
+                  ></ion-icon
+                  ><span class="add-cart"> Add to Cart</span>
+                </button>
+                <button><ion-icon name="heart-outline"></ion-icon></button>
+              </div>
+            </picture>
+            <h3><a href="#">Varsi Leather Bag</a></h3>
+            <p class="product-price">
+              <span>&pound;48.75</span>
+              <span><strike>&pound;65.00</strike></span>
+            </p>
+          </article>
+        </div>
+
+        <button class="btn-outline btn">View All Products</button>
+      </section>
+      <!-- ********** BLOG SECTION ********** -->
+      <section class="blog-container container">
+        <h2 class="section-title">Latest fashion news</h2>
+        <div class="blog-article d-flex">
+          <article>
+            <picture
+              ><img
+                src="./assets/images/blog-1.jpg"
+                alt="Worthy Cyber Monday Fashion From Casmart"
+            /></picture>
+            <div class="article-content">
+              <ul class="article-meta-items">
+                <li>
+                  <ion-icon name="folder-open-outline"></ion-icon>
+                  <a href="#"> Fashion </a>
+                </li>
+                <li>
+                  <ion-icon name="time-outline"></ion-icon>
+                  <a href="#">
+                    31 Mar 2021
+                  </a>
+                </li>
+              </ul>
+              <h3 class="article-title">
+                Worthy Cyber Monday Fashion From Casmart
+              </h3>
+            </div>
+          </article>
+            <article>
+            <picture
+              ><img
+                src="./assets/images/blog-2.jpg"
+                alt="Holiday Home Decoration I’ve Recently Ordered"
+            /></picture>
+            <div class="article-content">
+              <ul class="article-meta-items">
+                <li>
+                  <ion-icon name="folder-open-outline"></ion-icon>
+                  <a href="#"> Fashion </a>
+                </li>
+                <li>
+                  <ion-icon name="time-outline"></ion-icon>
+                  <a href="#">
+                    31 Mar 2021
+                  </a>
+                </li>
+              </ul>
+              <h3 class="article-title">
+              Holiday Home Decoration I’ve Recently Ordered
+              </h3>
+            </div>
+          </article>
+            <article>
+            <picture
+              ><img
+                src="./assets/images/blog-3.jpg"
+                alt="Worthy Cyber Monday Fashion From Casmart"
+            /></picture>
+            <div class="article-content">
+              <ul class="article-meta-items">
+                <li>
+                  <ion-icon name="folder-open-outline"></ion-icon>
+                  <a href="#"> Fashion </a>
+                </li>
+                <li>
+                  <ion-icon name="time-outline"></ion-icon>
+                  <a href="#">
+                    31 Mar 2021
+                  </a>
+                </li>
+              </ul>
+              <h3 class="article-title">
+                Unique Ideas for Fashion You Haven’t heard yet
+              </h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- ******** NEWSLETTER SECTION ********** -->
+      <section class="newsletter-container container">
+        <h2 class="section-title">Subscribe Newsletter</h2>
+        <div class="newsletter-content">
+            <p class="newsletter-desc">  
+        Enter your email below to be the first to know about new collections and product launches.
+        </p>
+        <form action="#">
+          <label for="susbscribe">enter your email</label>
+        <i> <ion-icon name="mail-outline"></ion-icon></i>
+          <input type="email" name="email" id="email" placeholder = "Enter your email">
+          <button class="btn primary-btn">Subscribe</button>
+        </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

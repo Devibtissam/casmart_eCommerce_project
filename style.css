@@ -1,0 +1,664 @@
+:root {
+  /* colors */
+  --middle-blue-green: hsl(176, 35%, 63%);
+  --sonic-silver: hsl(0, 0%, 44%);
+  --eerie-black: hsl(0, 0%, 9%);
+  --ocean-green: hsl(148, 45%, 58%);
+  --candy-spanink: hsl(356, 65%, 63%);
+  --cultured: hsl(0, 0%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /* tyspanograspanhy */
+
+  --ff-jost: 'Jost', sans-serif;
+  --fs-1: 2.5rem;
+  --fs-2: 1.75rem;
+  --fs-3: 1.625rem;
+  --fs-4: 1.5rem;
+  --fs-5: 1.375rem;
+  --fs-6: 1.25rem;
+  --fs-7: 1.125rem;
+  --fs-8: 0.938rem;
+  --fs-9: 0.875rem;
+  --fs-10: 0.813rem;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /* transition  */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.75s ease;
+  --cubic-out: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-in: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+  /* sspanacing */
+
+  --section-spacing: 60px;
+}
+
+/* httspans://spaniccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: ospantimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--sonic-silver);
+  font-family: var(--ff-jost);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+img{
+    object-fit: cover;
+}
+/* input */
+input,
+button {
+  border: none;
+  background-color: unset;
+  display: block;
+}
+
+/* headings  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-600);
+  color: var(--eerie-black);
+}
+
+/* Remove all animations, transitions and smooth scroll for spaneospanle that spanrefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------
+  General styles
+  ----------------
+*/
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 95%;
+  margin-inline: auto;
+}
+
+.primary-btn {
+  border: 1px solid var(--black);
+  padding: 0.75rem 3rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.primary-btn:is(:hover, :focus) {
+  background-color: unset;
+  color: var(--black);
+}
+
+.btn {
+  transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: var(--fw-600);
+  cursor: pointer;
+}
+
+.secondary-btn:is(:hover, :focus) {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-outline{
+  margin-block-start: 4rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border: 1px solid var(--black);
+}
+
+.btn-outline:is(:hover, :focus){
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.section-title{
+  font-size: var(--fs-2);
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+
+label{
+  position: absolute;
+  top: -999px;
+  left: -999px;
+}
+/* --------------
+  Header section/
+  Navbar
+  ----------------
+*/
+
+.search-form {
+  display: none;
+}
+
+header {
+  /* padding: 1rem; */
+}
+
+.nav-open-menu {
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+
+.nav-open-menu span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--black);
+}
+
+.nav-open-menu span:nth-child(2) {
+  transform: scale(0.5);
+  transform-origin: right;
+  transition: var(--transition-1);
+}
+
+.nav-open-menu:is(:hover, :focus) span:nth-child(2) {
+  transform: scale(1);
+}
+
+.header-actions {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block: 1rem;
+  box-shadow: 0 -2px 20px hsla(0, 0%, 0%, 0.1);
+  color: var(--eerie-black);
+  background-color: var(--white);
+  z-index: 3;
+}
+
+.header-actions span {
+  display: block;
+  font-size: var(--fs-10);
+}
+
+.header-actions button .header-action-icon {
+  font-size: var(--fs-6);
+}
+
+.header-actions button {
+  width: 75px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header-actions i {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  font-size: var(--fs-10);
+  width: 20px;
+  height: 20px;
+  background-color: var(--middle-blue-green);
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-1);
+  -webkit-transition: all var(--transition-1);
+  -moz-transition: all var(--transition-1);
+  -ms-transition: all var(--transition-1);
+  -o-transition: all var(--transition-1);
+}
+
+.overlay.active {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  padding: 1rem;
+  z-index: 6;
+  visibility: hidden;
+  transition: 0.25s var(--cubic-out);
+}
+
+.navbar.active {
+  visibility: visible;
+  transform: translateX(-300px);
+  transition: 0.5s var(--cubic-in);
+}
+
+.navbar .top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-block-end: 2.5rem;
+}
+
+.navbar .top-navbar .nav-close-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .top-navbar .nav-close-menu ion-icon {
+  font-size: var(--fs-5);
+  color: var(--eerie-black);
+  cursor: pointer;
+}
+
+.navbar .navbar-links li {
+  padding-block: 1rem;
+}
+
+.navbar .navbar-links li:not(:last-child) {
+  border-bottom: 1px solid var(--cultured);
+}
+
+.navbar .navbar-links li a {
+  color: var(--eerie-black);
+}
+
+/* --------------
+  Header section/
+  hero
+  ----------------
+*/
+
+section.hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  min-height: 80vh;
+  /* display: flex; */
+  /* align-items: center;  */
+}
+
+section .hero-title {
+  font-size: var(--fs-1);
+  line-height: 1;
+  margin-bottom: 2.18rem;
+  max-width: 12ch;
+}
+
+section .hero-subtitle {
+  color: var(--eerie-black);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-600);
+  margin-bottom: 1.25rem;
+}
+
+/* --------------
+  Main section/
+  Services
+  ----------------
+*/
+
+.service-container {
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-block-start: var(--section-spacing);
+}
+.service-container > * {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+.service-container > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.service-container .service-info h2.service-title {
+  font-size: var(--fs-7);
+}
+
+/* --------------
+  Main section/
+  category
+  ----------------
+*/
+
+.category-container {
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-container picture {
+  position: relative;
+  aspect-ratio: 2 / 2.35;
+  overflow: hidden;
+}
+
+.category-container picture img {
+  transition: var(--transition-2);
+}
+
+.category-container picture img:is(:hover) {
+  transform: scale(1.125);
+  -webkit-transform: scale(1.125);
+  -moz-transform: scale(1.125);
+  -ms-transform: scale(1.125);
+  -o-transform: scale(1.125);
+}
+
+.category-container button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  width: max-content;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+
+section.products-container {
+  padding-block: var(--section-spacing);
+}
+
+/* --------------
+  Main section/
+  Products 
+  ----------------
+*/
+section .products-cards,
+section .products-sort {
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+section .products-title,
+section .products-sort{
+  text-align: center;
+}
+
+
+
+section .products-sort h3{
+  margin-inline: 1.5vw;
+  transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+  cursor: pointer;
+}
+
+section .products-sort h3:is(:hover, :focus){
+  color: var(--middle-blue-green);
+}
+
+section .products-cards article picture{
+  position: relative;
+  overflow: hidden;
+}
+
+
+section .products-cards article h3{
+  margin-top: 1rem;
+}
+
+section .products-cards article picture div.product-card-action{
+  position: absolute;
+ bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-color: var(--black);
+
+}
+
+section .products-cards article picture div.product-card-action > *{
+  padding: 0.5rem;
+  color: var(--white);
+  font-family: var(--fw-600);
+  line-height: 1;
+  cursor: pointer;
+   transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+}
+
+section .products-cards article picture div.product-card-action button span.add-cart{
+  font-size: 0.75rem;
+  margin-inline: 0.3125rem;
+ 
+}
+
+section .products-cards article picture div.product-card-action button:nth-child(1),
+section .products-cards article picture div.product-card-action button:last-child{
+  background-color: var(--white);
+  color: var(--black);
+}
+
+section .products-cards article picture div.product-card-action button:nth-child(1):is(:hover,:focus),
+section .products-cards article picture div.product-card-action button:last-child:is(:hover,:focus){
+ background-color: var(--black);
+ color: var(--white);
+}
+
+section .products-cards article picture div.product-card-action button:nth-child(2){
+  flex-grow: 1
+}
+
+/* --------------
+  Main section/
+ Blog 
+  ----------------
+*/
+
+section.blog-container{
+  padding-block: var(--section-spacing);
+}
+
+
+section  div.blog-article{
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+section  div.blog-article figure{
+  overflow: hidden;
+}
+
+section div.blog-article .article-content{
+  text-align: center;
+  
+}
+section div.blog-article .article-content .article-meta-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+section div.blog-article .article-content .article-meta-items li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+section div.blog-article .article-content .article-meta-items li a{
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+}
+
+section div.blog-article .article-content h3.article-title{
+  font-size: var(--fs-6);
+
+}
+
+
+/* --------------
+  Main section/
+Newsletter
+  ----------------
+*/
+
+
+section.newsletter-container{
+  padding-block: var(--section-spacing);
+  background-color: var(--cultured);
+}
+
+section.newsletter-container .newsletter-content{
+  padding-inline: 1rem;
+}
+
+section.newsletter-container .newsletter-content .newsletter-desc{
+  text-align: center;
+}
+
+
+section.newsletter-container form > * {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+section.newsletter-container form input{
+  background-color: var(--white);
+  padding: 1rem 2.25rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+ section.newsletter-container form i {
+  position: relative;
+  top: 42px;
+  left: 8px;
+  transform: translateY(-45%);
+  -webkit-transform: translateY(-45%);
+  -moz-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  -o-transform: translateY(-45%);
+}
+
+
+
